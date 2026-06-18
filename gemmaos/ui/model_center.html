@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GemmaOS - Agent hub</title>
+    <title>GemmaOS - Model center</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,45 +19,48 @@
 
     <div class="view-container">
 <div class="header">
-        <div class="logo">AGENT HUB</div>
+        <div class="logo">MODEL CENTER</div>
 <div class="main-content">
-        <div class="section-title">Orchestration & Permissions</div>
-
-        <div class="recent-activities">
+        <div class="section">
+            <div class="section-title">Core Intelligence</div>
             <div class="glass-panel activity-item">
-                <div class="activity-icon" style="background: var(--primary-blue)"></div>
                 <div style="flex: 1">
-                    <strong>Coding Agent</strong>
-                    <small>High Autonomy | Write Access</small>
+                    <strong>Gemma 4 E2B-it</strong>
+                    <small>4-bit QAT | 2.5GB | Active (NPU)</small>
                 </div>
-                <div class="status-bar">ACTIVE</div>
+                <div class="status-bar">48.5 T/s</div>
             </div>
+        </div>
 
+        <div class="section">
+            <div class="section-title">Vision & Audio</div>
             <div class="glass-panel activity-item">
-                <div class="activity-icon" style="background: var(--secondary-purple)"></div>
                 <div style="flex: 1">
-                    <strong>Media Agent</strong>
-                    <small>Medium Autonomy | Generate/Edit</small>
+                    <strong>MobileSAM v2</strong>
+                    <small>Segmentation | 300MB | Active (GPU)</small>
                 </div>
-                <div class="status-bar">IDLE</div>
+                <div class="status-bar">LOADED</div>
             </div>
-
             <div class="glass-panel activity-item">
-                <div class="activity-icon" style="background: #ff4757"></div>
                 <div style="flex: 1">
-                    <strong>Security Agent</strong>
-                    <small>Critical Priority | Monitoring</small>
+                    <strong>Whisper Base</strong>
+                    <small>Speech-to-Text | 500MB | Active (NPU)</small>
                 </div>
-                <div class="status-bar">SCANNING</div>
+                <div class="status-bar">LOADED</div>
             </div>
+        </div>
 
-            <div class="glass-panel activity-item">
-                <div class="activity-icon" style="background: #2ed573"></div>
-                <div style="flex: 1">
-                    <strong>Communication Agent</strong>
-                    <small>Low Autonomy | Drafts only</small>
+        <div class="section">
+            <div class="section-title">Model Management</div>
+            <div class="widget-grid">
+                <div class="glass-panel widget">
+                    <strong>Benchmark</strong>
+                    <small>Run on-device test</small>
                 </div>
-                <div class="status-bar">ACTIVE</div>
+                <div class="glass-panel widget">
+                    <strong>Updates</strong>
+                    <small>2 Available</small>
+                </div>
             </div>
         </div>
 

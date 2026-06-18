@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemmaOS App Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-panel">
+        <a href="ai_home.html" class="nav-item">HOME</a>
+        <a href="studios.html" class="nav-item">STDO</a>
+        <a href="centers.html" class="nav-item">CNTR</a>
+        <a href="settings.html" class="nav-item">SET</a>
+    </div>
+
+    <div class="view-container">
+        <div class="header">
+            <div class="logo">AI APP BUILDER</div>
+            <div class="status-bar">KOTLIN/COMPOSE READY</div>
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <div class="section-title">Prompt-to-App Generation</div>
+                <textarea class="glass-panel" style="width: 100%; height: 100px; padding: 16px; margin-bottom: 12px; color: white;" placeholder="Define your app requirements..."></textarea>
+                <button class="glass-panel" style="width: 100%; padding: 16px; font-weight: bold; background: var(--primary-blue); color: white; border: none;">BUILD SANDBOX APP</button>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Generation Pipeline</div>
+                <div class="recent-activities">
+                    <div class="glass-panel activity-item">
+                        <div style="flex: 1">
+                            <strong>1. Requirements Analysis</strong>
+                            <small>Extracting Data Model & UI Components</small>
+                        </div>
+                        <div class="status-bar" style="color: #2ed573">DONE</div>
+                    </div>
+                    <div class="glass-panel activity-item">
+                        <div style="flex: 1">
+                            <strong>2. Code Generation</strong>
+                            <small>Generating Jetpack Compose & ViewModel</small>
+                        </div>
+                        <div class="status-bar">IN PROGRESS</div>
+                    </div>
+                    <div class="glass-panel activity-item" style="opacity: 0.5">
+                        <div style="flex: 1">
+                            <strong>3. Compilation & Install</strong>
+                            <small>On-device sandboxed build</small>
+                        </div>
+                        <div class="status-bar">PENDING</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gemma-orb-container">
+        <div class="gemma-orb"></div>
+        <small style="opacity: 0.6">LISTENING</small>
+    </div>
+</body>
+</html>
