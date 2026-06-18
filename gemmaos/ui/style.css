@@ -5,6 +5,7 @@
     --glass-bg: rgba(255, 255, 255, 0.08);
     --glass-border: rgba(255, 255, 255, 0.15);
     --glow-blue: 0 0 20px rgba(0, 212, 255, 0.4);
+    --sidebar-width: 80px;
 }
 
 body {
@@ -16,7 +17,59 @@ body {
     height: 100vh;
     overflow: hidden;
     display: flex;
+}
+
+/* Sidebar Navigation */
+.nav-panel {
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid var(--glass-border);
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.nav-item {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: white;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--primary-blue);
+    transform: scale(1.05);
+}
+
+.nav-item.active {
+    background: var(--primary-blue);
+    border-color: white;
+    box-shadow: var(--glow-blue);
+}
+
+/* Main View */
+.view-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .glass-panel {
@@ -59,25 +112,25 @@ body {
 }
 
 .intent-bar-container {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .intent-bar {
     width: 100%;
-    padding: 18px 24px;
+    padding: 16px 24px;
     box-sizing: border-box;
-    font-size: 1.1rem;
+    font-size: 1rem;
     outline: none;
     color: white;
-    box-shadow: var(--glow-blue);
 }
 
 .section-title {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0.6;
+    margin-bottom: 12px;
 }
 
 .widget-grid {
@@ -99,9 +152,6 @@ body {
     background: rgba(255, 255, 255, 0.12);
     transform: translateY(-4px);
 }
-
-.widget strong { font-size: 1rem; }
-.widget small { opacity: 0.6; font-size: 0.8rem; }
 
 .recent-activities {
     display: flex;
@@ -126,8 +176,7 @@ body {
 .gemma-orb-container {
     position: fixed;
     bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,35 +185,35 @@ body {
 }
 
 .gemma-orb {
-    width: 72px;
-    height: 72px;
+    width: 60px;
+    height: 60px;
     background: radial-gradient(circle at 30% 30%, var(--primary-blue), var(--secondary-purple));
     border-radius: 50%;
-    box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
     animation: gemma-pulse 3s infinite ease-in-out;
 }
 
 @keyframes gemma-pulse {
     0% { transform: scale(1); filter: brightness(1); }
-    50% { transform: scale(1.08); filter: brightness(1.3); box-shadow: 0 0 60px rgba(0, 212, 255, 0.7); }
+    50% { transform: scale(1.1); filter: brightness(1.2); }
     100% { transform: scale(1); filter: brightness(1); }
 }
 
-.nav-panel {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 12px;
+.toggle {
+    width: 36px;
+    height: 20px;
+    background: var(--primary-blue);
+    border-radius: 10px;
+    position: relative;
 }
 
-.nav-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+.toggle::after {
+    content: '';
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
 }

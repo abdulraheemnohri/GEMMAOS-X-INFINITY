@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemmaOS - Automation studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="nav-panel">
+        <a href="ai_home.html" class="nav-item">HOME</a>
+        <a href="dashboard.html" class="nav-item">DASH</a>
+        <a href="mission_control.html" class="nav-item">MISS</a>
+        <a href="studios.html" class="nav-item">STDO</a>
+        <a href="centers.html" class="nav-item">CNTR</a>
+        <a href="settings.html" class="nav-item">SET</a>
+    </div>
+
+    <div class="view-container">
+<div class="header">
+        <div class="logo">AUTOMATION STUDIO</div>
+<div class="main-content">
+        <div class="section">
+            <div class="section-title">Visual Workflow Builder</div>
+            <div class="glass-panel" style="height: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px;">
+                <div class="glass-panel" style="padding: 10px 20px; border-color: #2ed573">TRIGGER: Time is 08:30</div>
+                <div style="height: 30px; border-left: 2px dashed var(--glass-border)"></div>
+                <div class="glass-panel" style="padding: 10px 20px; border-color: var(--primary-blue)">ACTION: Launch Work Apps</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Active Workflows</div>
+            <div class="recent-activities">
+                <div class="glass-panel activity-item">
+                    <div style="flex: 1">
+                        <strong>Battery Saver Pro</strong>
+                        <small>Trigger: Battery < 15% | Power Mode: Saver</small>
+                    </div>
+                    <div class="toggle"></div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div style="flex: 1">
+                        <strong>Meeting Mode</strong>
+                        <small>Trigger: Calendar Event | DND: On</small>
+                    </div>
+                    <div class="toggle"></div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="gemma-orb-container">
+        <div class="gemma-orb"></div>
+        <small style="opacity: 0.6">LISTENING</small>
+    </div>
+
+</body>
+</html>
