@@ -36,3 +36,19 @@ class MyAgent(BaseAgent):
 
 ## Community Integration
 - `share_workflow(workflow, privacy)`: Shared automation with the mesh.
+
+## Coding & Communication Agent APIs
+
+### CodingAgent
+- `write_code(file, language, description)`: Generates code files based on natural language.
+- `refactor_code(file, context)`: Improves existing code structure or fixes bugs.
+- `run_tests()`: Executes the project's test suite.
+
+### CommunicationAgent
+- `summarize_thread()`: Provides a concise summary of recent communication logs.
+- `draft_reply(contact)`: Generates an AI-suggested response draft.
+- `schedule_message(time)`: Defers message delivery to a specific timestamp.
+
+### CodingStudio
+- `create_project(name, description)`: Scaffolds a new software project.
+- `debug_file(file, error_log)`: Automatically analyzes and fixes code errors.
