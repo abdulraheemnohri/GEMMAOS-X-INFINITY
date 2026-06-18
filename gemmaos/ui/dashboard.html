@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemmaOS AI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .ai-curated-card {
+            border-left: 4px solid var(--primary-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">GEMMA DASHBOARD</div>
+        <div class="status-bar">
+            <span>LOC: HOME</span>
+            <span>MODE: DEEP WORK</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="section">
+            <div class="section-title">Predicted Actions</div>
+            <div class="widget-grid">
+                <div class="glass-panel widget ai-curated-card">
+                    <strong>Resume Coding</strong>
+                    <small>GemmaOS X Infinity Scaffold</small>
+                </div>
+                <div class="glass-panel widget ai-curated-card">
+                    <strong>Generate Report</strong>
+                    <small>Summary of yesterday's research</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Knowledge Insights</div>
+            <div class="recent-activities">
+                <div class="glass-panel activity-item">
+                    <div class="activity-icon"></div>
+                    <div style="flex: 1">
+                        <strong>Fact Extracted</strong>
+                        <small>"NPU performance is critical for local LLM..."</small>
+                    </div>
+                </div>
+                <div class="glass-panel activity-item">
+                    <div class="activity-icon"></div>
+                    <div style="flex: 1">
+                        <strong>Document Indexed</strong>
+                        <small>Neural_Glass_Architecture.pdf</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">System Evolution</div>
+            <div class="glass-panel activity-item" style="border-color: #ffd32a">
+                <div style="flex: 1">
+                    <strong>Automation Proposal</strong>
+                    <small>I noticed you check logs after every build. Create macro?</small>
+                </div>
+                <button class="glass-panel" style="padding: 8px 16px; font-size: 0.8rem">APPROVE</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gemma-orb-container">
+        <div class="gemma-orb"></div>
+        <small style="opacity: 0.6">AI CO-PILOT ACTIVE</small>
+    </div>
+</body>
+</html>
