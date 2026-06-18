@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemmaOS - Centers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .center-card { border-left: 4px solid var(--secondary-purple); text-decoration: none; color: inherit; }
+    </style>
+    <script src="bridge.js"></script>
+</head>
+<body>
+    <div class="nav-panel">
+        <a href="ai_home.html" class="nav-item">HOME</a>
+        <a href="dashboard.html" class="nav-item">DASH</a>
+        <a href="mission_control.html" class="nav-item">MISS</a>
+        <a href="studios.html" class="nav-item">STDO</a>
+        <a href="centers.html" class="nav-item active">CNTR</a>
+        <a href="settings.html" class="nav-item">SET</a>
+    </div>
+
+    <div class="view-container">
+        <div class="header">
+            <div class="logo">SYSTEM CENTERS</div>
+            <div class="status-bar">HEALTH: NOMINAL</div>
+        </div>
+
+        <div class="main-content">
+            <div class="recent-activities">
+                <a href="security_center.html" class="glass-panel activity-item center-card">
+                    <div style="flex: 1">
+                        <strong>Security Center</strong>
+                        <small>Firewall, Malware Scan, Privacy Leak Detec.</small>
+                    </div>
+                    <div class="status-bar" style="color: #2ed573">SECURE</div>
+                </a>
+
+                <a href="performance_center.html" class="glass-panel activity-item center-card">
+                    <div style="flex: 1">
+                        <strong>Performance Center</strong>
+                        <small>Predictive Lag, Battery Intel, Storage Cleanup</small>
+                    </div>
+                    <div class="status-bar">OPTIMIZED</div>
+                </a>
+
+                <a href="model_center.html" class="glass-panel activity-item center-card">
+                    <div style="flex: 1">
+                        <strong>Model Center</strong>
+                        <small>Downloads, Benchmarks, Quantization</small>
+                    </div>
+                    <div class="status-bar">3 MODELS</div>
+                </a>
+
+                <a href="network_center.html" class="glass-panel activity-item center-card">
+                    <div style="flex: 1">
+                        <strong>Network Center</strong>
+                        <small>Mesh Node, P2P Sync, Diagnostics</small>
+                    </div>
+                    <div class="status-bar">2 PEERS</div>
+                </a>
+
+                <a href="agent_hub.html" class="glass-panel activity-item center-card">
+                    <div style="flex: 1">
+                        <strong>Agent Hub</strong>
+                        <small>Orchestration & Permission Control</small>
+                    </div>
+                    <div class="status-bar">7 ACTIVE</div>
+                </a>
+
+                <a href="settings.html" class="glass-panel activity-item center-card">
+                    <div style="flex: 1">
+                        <strong>Settings Center</strong>
+                        <small>Personality, Privacy, Autonomy Levels</small>
+                    </div>
+                    <div class="status-bar">v1.0</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="gemma-orb-container">
+        <div class="gemma-orb"></div>
+        <small style="opacity: 0.6">LISTENING</small>
+    </div>
+
+    <div id="system-console" class="glass-panel" style="position: fixed; bottom: 20px; left: 100px; right: 100px; height: 150px; padding: 15px; font-family: monospace; font-size: 0.7rem; overflow-y: auto; display: none; z-index: 2000;">
+        <div style="color: var(--primary-blue); margin-bottom: 5px;">[GEMMAOS KERNEL LOG]</div>
+        <div id="console-output"></div>
+    </div>
+
+</body>
+</html>

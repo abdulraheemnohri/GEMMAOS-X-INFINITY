@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GemmaOS - Coding studio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="bridge.js"></script>
 </head>
 <body>
 
@@ -52,6 +53,12 @@
     <div class="gemma-orb-container">
         <div class="gemma-orb"></div>
         <small style="opacity: 0.6">LISTENING</small>
+    </div>
+
+
+    <div id="system-console" class="glass-panel" style="position: fixed; bottom: 20px; left: 100px; right: 100px; height: 150px; padding: 15px; font-family: monospace; font-size: 0.7rem; overflow-y: auto; display: none; z-index: 2000;">
+        <div style="color: var(--primary-blue); margin-bottom: 5px;">[GEMMAOS KERNEL LOG]</div>
+        <div id="console-output"></div>
     </div>
 
 </body>

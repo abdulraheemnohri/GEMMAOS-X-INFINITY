@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemmaOS Boot</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { justify-content: center; align-items: center; background: #000; height: 100vh; flex-direction: column; }
+        .boot-logo { width: 120px; height: 120px; background: radial-gradient(circle, var(--primary-blue), var(--secondary-purple)); border-radius: 50%; box-shadow: 0 0 50px var(--primary-blue); animation: boot-pulse 2s infinite; margin-bottom: 40px; }
+        @keyframes boot-pulse { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.2); opacity: 1; } }
+        .loading-text { font-family: monospace; letter-spacing: 4px; font-size: 0.8rem; opacity: 0.6; }
+        .progress-bar { width: 200px; height: 2px; background: var(--glass-border); margin-top: 20px; position: relative; overflow: hidden; }
+        .progress-fill { position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: var(--primary-blue); animation: load 3s forwards; }
+        @keyframes load { to { width: 100%; } }
+    </style>
+    <script src="bridge.js"></script>
+</head>
+<body>
+    <div class="boot-logo"></div>
+    <div class="loading-text">GEMMAOS X INFINITY</div>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+    <script>setTimeout(() => { window.location.href = 'lock_screen.html'; }, 3500);</script>
+
+    <div id="system-console" class="glass-panel" style="position: fixed; bottom: 20px; left: 100px; right: 100px; height: 150px; padding: 15px; font-family: monospace; font-size: 0.7rem; overflow-y: auto; display: none; z-index: 2000;">
+        <div style="color: var(--primary-blue); margin-bottom: 5px;">[GEMMAOS KERNEL LOG]</div>
+        <div id="console-output"></div>
+    </div>
+
+</body>
+</html>
