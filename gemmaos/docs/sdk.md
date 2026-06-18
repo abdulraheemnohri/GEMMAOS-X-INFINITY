@@ -23,3 +23,16 @@ class MyAgent(BaseAgent):
 - `MemoryAPI`: Access Tier 1-5 memory.
 - `MeshAPI`: Local peer communication.
 - `PerceptionAPI`: Real-time sensor data.
+
+## Research & Creator Studio APIs
+
+### ResearchStudio
+- `analyze_topic(topic)`: Semantic analysis of local vault.
+- `generate_report(synthesis, format)`: PDF/Markdown report generation.
+
+### CreatorStudio
+- `create_project(type, prompt)`: Generate media content.
+- `apply_style_transfer(file, style)`: Edit media with AI filters.
+
+## Community Integration
+- `share_workflow(workflow, privacy)`: Shared automation with the mesh.
