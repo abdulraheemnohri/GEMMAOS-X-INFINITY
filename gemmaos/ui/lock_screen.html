@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemmaOS Lock</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { justify-content: center; align-items: center; background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop') center/cover; }
+        .lock-container { text-align: center; backdrop-filter: blur(20px); padding: 40px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.1); }
+        .time { font-size: 5rem; font-weight: 200; margin-bottom: 10px; }
+        .date { font-size: 1.2rem; opacity: 0.6; margin-bottom: 40px; }
+        .intent-entry { background: rgba(255,255,255,0.1); border: none; padding: 20px; border-radius: 20px; color: white; width: 300px; text-align: center; font-size: 1.1rem; }
+    </style>
+    <script src="bridge.js"></script>
+</head>
+<body>
+    <div class="lock-container">
+        <div class="time">12:45</div>
+        <div class="date">Tuesday, June 18</div>
+        <input type="text" class="intent-entry" placeholder="Enter intent to unlock..." onkeypress="if(event.key==='Enter') window.location.href='ai_home.html'">
+        <div style="margin-top: 20px; font-size: 0.8rem; opacity: 0.5;">Biometric Auth Ready</div>
+    </div>
+
+    <div id="system-console" class="glass-panel" style="position: fixed; bottom: 20px; left: 100px; right: 100px; height: 150px; padding: 15px; font-family: monospace; font-size: 0.7rem; overflow-y: auto; display: none; z-index: 2000;">
+        <div style="color: var(--primary-blue); margin-bottom: 5px;">[GEMMAOS KERNEL LOG]</div>
+        <div id="console-output"></div>
+    </div>
+
+</body>
+</html>

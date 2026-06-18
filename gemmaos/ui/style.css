@@ -217,3 +217,7 @@ body {
     background: white;
     border-radius: 50%;
 }
+/* Interactivity */
+button:active, .nav-item:active { transform: scale(0.95); }
+textarea, input { transition: border-color 0.3s; }
+textarea:focus, input:focus { border-color: var(--primary-blue); }

@@ -5,65 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GemmaOS - Studios</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .studio-card { border-top: 4px solid var(--primary-blue); text-decoration: none; color: inherit; }
+    </style>
+    <script src="bridge.js"></script>
 </head>
 <body>
-
     <div class="nav-panel">
         <a href="ai_home.html" class="nav-item">HOME</a>
         <a href="dashboard.html" class="nav-item">DASH</a>
         <a href="mission_control.html" class="nav-item">MISS</a>
-        <a href="studios.html" class="nav-item">STDO</a>
+        <a href="studios.html" class="nav-item active">STDO</a>
         <a href="centers.html" class="nav-item">CNTR</a>
         <a href="settings.html" class="nav-item">SET</a>
     </div>
 
     <div class="view-container">
-<div class="header">
-        <div class="logo">STUDIO SUITE</div>
-<div class="main-content">
-        <div class="widget-grid">
-            <!-- Research Studio -->
-            <div class="glass-panel widget studio-card">
-                <strong>Research Studio</strong>
-                <small>RAG, Synthesis, Mapping</small>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-top: 10px;">Active: "LLM Efficiency"</div>
-            </div>
-
-            <!-- Creator Studio -->
-            <div class="glass-panel widget studio-card">
-                <strong>Creator Studio</strong>
-                <small>Image, Video, Audio Gen</small>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-top: 10px;">Ready: SDXL Turbo</div>
-            </div>
-
-            <!-- Coding Studio -->
-            <div class="glass-panel widget studio-card">
-                <strong>Coding Studio</strong>
-                <small>IDE, Pair AI, Build Hub</small>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-top: 10px;">Open: main.py</div>
-            </div>
-
-            <!-- Automation Studio -->
-            <div class="glass-panel widget studio-card">
-                <strong>Automation Studio</strong>
-                <small>Workflows, Macros, Triggers</small>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-top: 10px;">8 Active Workflows</div>
-            </div>
-
-            <!-- App Builder -->
-            <div class="glass-panel widget studio-card" style="grid-column: span 2">
-                <strong>AI App Builder</strong>
-                <small>Prompt-to-App (Jetpack Compose / PWA)</small>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-top: 10px;">"Build a personal expense tracker"</div>
-            </div>
+        <div class="header">
+            <div class="logo">STUDIO SUITE</div>
+            <div class="status-bar">PROMPT-TO-ACTION READY</div>
         </div>
 
+        <div class="main-content">
+            <div class="widget-grid">
+                <a href="research_studio.html" class="glass-panel widget studio-card">
+                    <strong>Research Studio</strong>
+                    <small>RAG, Synthesis, Mapping</small>
+                </a>
+
+                <a href="creator_studio.html" class="glass-panel widget studio-card">
+                    <strong>Creator Studio</strong>
+                    <small>Image, Video, Audio Gen</small>
+                </a>
+
+                <a href="coding_studio.html" class="glass-panel widget studio-card">
+                    <strong>Coding Studio</strong>
+                    <small>IDE, Pair AI, Build Hub</small>
+                </a>
+
+                <a href="automation_studio.html" class="glass-panel widget studio-card">
+                    <strong>Automation Studio</strong>
+                    <small>Workflows, Macros, Triggers</small>
+                </a>
+
+                <a href="app_builder.html" class="glass-panel widget studio-card" style="grid-column: span 2">
+                    <strong>AI App Builder</strong>
+                    <small>Prompt-to-App (Jetpack Compose / PWA)</small>
+                </a>
+            </div>
         </div>
     </div>
 
     <div class="gemma-orb-container">
         <div class="gemma-orb"></div>
         <small style="opacity: 0.6">LISTENING</small>
+    </div>
+
+    <div id="system-console" class="glass-panel" style="position: fixed; bottom: 20px; left: 100px; right: 100px; height: 150px; padding: 15px; font-family: monospace; font-size: 0.7rem; overflow-y: auto; display: none; z-index: 2000;">
+        <div style="color: var(--primary-blue); margin-bottom: 5px;">[GEMMAOS KERNEL LOG]</div>
+        <div id="console-output"></div>
     </div>
 
 </body>

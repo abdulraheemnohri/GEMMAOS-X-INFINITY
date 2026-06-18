@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GemmaOS - Ai home</title>
     <link rel="stylesheet" href="style.css">
+    <script src="bridge.js"></script>
 </head>
 <body>
-
     <div class="nav-panel">
-        <a href="ai_home.html" class="nav-item">HOME</a>
+        <a href="ai_home.html" class="nav-item active">HOME</a>
         <a href="dashboard.html" class="nav-item">DASH</a>
         <a href="mission_control.html" class="nav-item">MISS</a>
         <a href="studios.html" class="nav-item">STDO</a>
@@ -18,52 +18,36 @@
     </div>
 
     <div class="view-container">
-<div class="header">
-        <div class="logo">GEMMAOS X INFINITY</div>
-<div class="main-content">
-        <div class="intent-bar-container">
-            <input type="text" class="glass-panel intent-bar" placeholder="Define your next evolution...">
+        <div class="header">
+            <div class="logo">GEMMAOS X INFINITY</div>
+            <div class="status-bar"><span>NPU 18%</span></div>
         </div>
 
-        <div class="section">
-            <div class="section-title">Proactive Suggestions</div>
-            <div class="widget-grid">
-                <div class="glass-panel widget">
-                    <strong>Deep Work Mode</strong>
-                    <small>Based on current focus</small>
-                </div>
-                <div class="glass-panel widget">
-                    <strong>Review Workflow</strong>
-                    <small>Discovered pattern</small>
-                </div>
+        <div class="main-content">
+            <div class="intent-bar-container">
+                <input type="text" class="glass-panel intent-bar" placeholder="Define your next evolution..." onkeypress="if(event.key==='Enter'){ GemmaOS.dispatchIntent(this.value); this.value=''; }">
             </div>
-        </div>
 
-        <div class="section">
-            <div class="section-title">Active Agents</div>
-            <div class="recent-activities">
-                <div class="glass-panel activity-item">
-                    <div class="activity-icon"></div>
-                    <div>
-                        <strong>Security Agent</strong>
-                        <small>Network monitoring active</small>
+            <div class="section">
+                <div class="section-title">Proactive Suggestions</div>
+                <div class="widget-grid">
+                    <div class="glass-panel widget" onclick="GemmaOS.dispatchIntent('Start Morning Routine')">
+                        <strong>Deep Work Mode</strong>
+                        <small>Based on current focus</small>
                     </div>
-                </div>
-                <div class="glass-panel activity-item">
-                    <div class="activity-icon"></div>
-                    <div>
-                        <strong>Memory Tier 3</strong>
-                        <small>Consolidating nightly sessions</small>
+                    <div class="glass-panel widget" onclick="GemmaOS.dispatchIntent('Review Workflow')">
+                        <strong>Review Workflow</strong>
+                        <small>Discovered pattern</small>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="gemma-orb-container">
-        <div class="gemma-orb"></div>
-        <small style="letter-spacing: 2px; opacity: 0.8; font-size: 0.7rem;">LISTENING</small>
-
+            <div class="section">
+                <div class="section-title">Active Agent Swarm</div>
+                <ul class="agent-list" style="list-style: none; padding: 0;">
+                    <!-- Populated by bridge.js -->
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -72,5 +56,9 @@
         <small style="opacity: 0.6">LISTENING</small>
     </div>
 
+    <div id="system-console" class="glass-panel" style="position: fixed; bottom: 20px; left: 100px; right: 100px; height: 150px; padding: 15px; font-family: monospace; font-size: 0.7rem; overflow-y: auto; display: none; z-index: 2000;">
+        <div style="color: var(--primary-blue); margin-bottom: 5px;">[GEMMAOS KERNEL LOG]</div>
+        <div id="console-output"></div>
+    </div>
 </body>
 </html>
